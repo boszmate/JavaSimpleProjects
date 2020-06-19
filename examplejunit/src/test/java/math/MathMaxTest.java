@@ -13,7 +13,7 @@ public class MathMaxTest {
         // then
         final int result = Math.findMax(numbers);
 
-        // excepted
+        // expected
         Assert.assertEquals(101, result);
     }
 

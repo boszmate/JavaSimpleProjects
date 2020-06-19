@@ -13,7 +13,7 @@ public class MathAverageTest {
         // then
         float average = Math.calculateAverage(numbers);
 
-        // excepted
+        // expected
         Assert.assertEquals(2.0, average, 0.01);
     }
 }

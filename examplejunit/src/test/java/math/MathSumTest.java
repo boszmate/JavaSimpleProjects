@@ -13,7 +13,7 @@ public class MathSumTest {
         // then
         int result = Math.calculateSum(numbers);
 
-        // excepted
+        // expected
         Assert.assertEquals(6, result);
     }
 }
