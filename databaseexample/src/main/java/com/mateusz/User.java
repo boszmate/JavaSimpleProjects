@@ -2,12 +2,12 @@ package com.mateusz;
 
 public class User {
     private String name;
-    private String lastname;
-    private Integer age;
+    private String lastName;
+    private int age;
 
-    public User(String name, String lastname, Integer age) {
+    public User(String name, String lastName, int age) {
         this.name = name;
-        this.lastname = lastname;
+        this.lastName = lastName;
         this.age = age;
     }
 
@@ -15,11 +15,11 @@ public class User {
         return name;
     }
 
-    public String getLastname() {
-        return lastname;
+    public String getLastName() {
+        return lastName;
     }
 
-    public Integer getAge() {
+    public int getAge() {
         return age;
     }
 
@@ -27,7 +27,7 @@ public class User {
     public String toString() {
         return "User{" +
                 "name='" + name + '\'' +
-                ", lastname='" + lastname + '\'' +
+                ", lastName='" + lastName + '\'' +
                 ", age=" + age +
                 '}';
     }

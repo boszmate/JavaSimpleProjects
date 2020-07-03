@@ -5,22 +5,24 @@ import java.util.Scanner;
 public class Main {
 
     static Scanner scanner = new Scanner(System.in);
+    static UserDao userDao = new UserDao();
 
     public static void createUser() {
-        String name, lastname;
-        Integer age;
+        String name, lastName;
+        int age;
 
         System.out.println("Type a name: ");
         name = scanner.next();
 
-        System.out.println("Type a lastname: ");
-        lastname = scanner.next();
+        System.out.println("Type a lastName: ");
+        lastName = scanner.next();
 
         System.out.println("Type your age: ");
         age = scanner.nextInt();
 
-        User user = new User(name, lastname, age);
-        System.out.println("Create user: " + user.toString());
+        User user = new User(name, lastName, age);
+        userDao.createUser(user);
+        //System.out.println("PRINTLN: Create user: " + user.toString());
     }
 
 
@@ -41,6 +43,9 @@ public class Main {
 
     public static void main(String[] args) {
         createUser();
-        calculate();
+        //calculate();
+
+        UserDao userDao = new UserDao();
+        System.out.println(userDao.getAllUsers());
     }
 }
