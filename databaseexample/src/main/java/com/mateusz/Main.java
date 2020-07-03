@@ -25,27 +25,43 @@ public class Main {
         //System.out.println("PRINTLN: Create user: " + user.toString());
     }
 
+    public static void deleteUser() {
+        String lastName;
 
-    public static void calculate() {
-        Integer x, y;
+        System.out.println("Type a lastName: ");
+        lastName = scanner.next();
 
-        System.out.println("Type first number: ");
-        x = scanner.nextInt();
+        userDao.deleteUser(lastName);
+    }
 
-        System.out.println("Type second number: ");
-        y = scanner.nextInt();
+    public static void updateUser() {
+        String name, lastName;
+        int age, id;
 
-        System.out.println("Sum: " + Calculator.add(x, y));
-        System.out.println("Subtract: " + Calculator.subtract(x, y));
-        System.out.println("Multiply: " + Calculator.multiply(x, y));
-        System.out.println("Divide: " + Calculator.divide(x, y));
+        System.out.println("Type user id to update: ");
+        id = scanner.nextInt();
+
+        System.out.println("Type a new name: ");
+        name = scanner.next();
+
+        System.out.println("Type a new lastName: ");
+        lastName = scanner.next();
+
+        System.out.println("Type a new age: ");
+        age = scanner.nextInt();
+
+        User user = new User(id, name, lastName, age);
+        userDao.updateUser(user);
     }
 
     public static void main(String[] args) {
         createUser();
-        //calculate();
+        deleteUser();
 
         UserDao userDao = new UserDao();
+        System.out.println(userDao.getAllUsers());
+
+        updateUser();
         System.out.println(userDao.getAllUsers());
     }
 }

@@ -67,4 +67,40 @@ public class UserDao {
             e.printStackTrace();
         }
     }
+
+    public void deleteUser(String lastName) {
+        PreparedStatement statement;
+
+        try {
+            String query = "delete from " + tableName + " where lastname = ?";
+            statement = connection.prepareStatement(query);
+
+            statement.setString(1, lastName);
+            statement.execute();
+
+            statement.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    public void updateUser(User user) {
+        PreparedStatement statement;
+
+        try {
+            String query = "update " + tableName + " set name = ?, lastname = ?, age = ? where id = ?";
+            statement = connection.prepareStatement(query);
+
+            statement.setString(1, user.getName());
+            statement.setString(2, user.getLastName());
+            statement.setInt(3, user.getAge());
+            statement.setInt(4, user.getId());
+            statement.execute();
+
+            statement.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }
