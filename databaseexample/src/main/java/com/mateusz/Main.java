@@ -1,14 +1,21 @@
 package com.mateusz;
 
+import com.mateusz.dao.UserDao;
+import com.mateusz.dao.UserRoleDao;
+import com.mateusz.enums.Role;
+import com.mateusz.model.User;
+import com.mateusz.model.UserRole;
+
 import java.util.Scanner;
 
 public class Main {
 
     static Scanner scanner = new Scanner(System.in);
     static UserDao userDao = new UserDao();
+    static UserRoleDao userRoleDao = new UserRoleDao();
 
     public static void createUser() {
-        String name, lastName;
+        String name, lastName, role;
         int age;
 
         System.out.println("Type a name: ");
@@ -20,7 +27,10 @@ public class Main {
         System.out.println("Type your age: ");
         age = scanner.nextInt();
 
-        User user = new User(name, lastName, age);
+        System.out.println("Type user role: [USER, ADMIN] ");
+        role = scanner.next();
+
+        User user = new User(name, lastName, age, new UserRole(Role.valueOf(role)));
         userDao.createUser(user);
         //System.out.println("PRINTLN: Create user: " + user.toString());
     }
@@ -35,7 +45,7 @@ public class Main {
     }
 
     public static void updateUser() {
-        String name, lastName;
+        String name, lastName, role;
         int age, id;
 
         System.out.println("Type user id to update: ");
@@ -50,11 +60,15 @@ public class Main {
         System.out.println("Type a new age: ");
         age = scanner.nextInt();
 
-        User user = new User(id, name, lastName, age);
+        System.out.println("Type user role: {USER, ADMIN) ");
+        role = scanner.next();
+
+        User user = new User(id, name, lastName, age, new UserRole(Role.valueOf(role)));
         userDao.updateUser(user);
     }
 
     public static void main(String[] args) {
+        System.out.println("User roles: " + userRoleDao.getAllUserRoles());
         createUser();
         deleteUser();
 
