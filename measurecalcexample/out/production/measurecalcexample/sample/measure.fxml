@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<SplitPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="365.0" prefWidth="710.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<SplitPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="365.0" prefWidth="710.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
     <items>
         <AnchorPane minHeight="345.0" minWidth="636.0" prefHeight="463.0" prefWidth="636.0">
             <children>
@@ -61,18 +61,18 @@
                                 <Font size="15.0" />
                             </font>
                         </Label>
-                        <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                        <TextArea fx:id="ton_gram_text" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
                         <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                         <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                         <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                         <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
                         <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                        <Button layoutX="430.0" layoutY="10.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="145.0" text="Button" GridPane.columnIndex="2" GridPane.rowIndex="0" />
-                        <Button layoutX="430.0" layoutY="10.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="145.0" text="Button" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                        <Button layoutX="430.0" layoutY="86.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="145.0" text="Button" GridPane.columnIndex="2" GridPane.rowIndex="4" />
-                        <Button layoutX="430.0" layoutY="86.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="145.0" text="Button" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-                        <Button layoutX="430.0" layoutY="86.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="145.0" text="Button" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                        <Button layoutX="430.0" layoutY="314.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="145.0" text="Button" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                        <Button onAction="#clickButtonTonToGram" layoutX="430.0" layoutY="10.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="145.0" text="Button" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+                        <Button onAction="#clickButtonMeterToMillimeter" layoutX="430.0" layoutY="10.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="145.0" text="Button" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <Button onAction="#clickButtonKilometerToNauticalMile" layoutX="430.0" layoutY="86.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="145.0" text="Button" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                        <Button onAction="#clickButtonCelsiusToFahrenheit" layoutX="430.0" layoutY="86.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="145.0" text="Button" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                        <Button onAction="#clickButtonGallonToLiter" layoutX="430.0" layoutY="86.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="145.0" text="Button" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                        <Button onAction="#clickButtonPoundToKilogram" layoutX="430.0" layoutY="314.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="145.0" text="Button" GridPane.columnIndex="2" GridPane.rowIndex="5" />
                         <Label fx:id="ton_gram_label" alignment="CENTER" contentDisplay="CENTER" layoutX="20.0" layoutY="10.0" prefHeight="160.0" prefWidth="229.0" style="-fx-background-color: #c0c0c0;" textAlignment="CENTER" GridPane.columnIndex="3">
                             <font>
                                 <Font size="15.0" />

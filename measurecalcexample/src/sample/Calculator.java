@@ -10,7 +10,7 @@ public class Calculator {
         return instance;
     }
 
-    public void setNumberToCalculate(int numberToCalculate) {
+    public void setNumberToCalculate(double numberToCalculate) {
         this.numberToCalculate = numberToCalculate;
     }
 
