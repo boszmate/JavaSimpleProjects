@@ -62,18 +62,18 @@
                             </font>
                         </Label>
                         <TextArea fx:id="ton_gram_text" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
-                        <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                        <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                        <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                        <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                        <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                        <Button onAction="#clickButtonTonToGram" layoutX="430.0" layoutY="10.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="145.0" text="Button" GridPane.columnIndex="2" GridPane.rowIndex="0" />
-                        <Button onAction="#clickButtonMeterToMillimeter" layoutX="430.0" layoutY="10.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="145.0" text="Button" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                        <Button onAction="#clickButtonKilometerToNauticalMile" layoutX="430.0" layoutY="86.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="145.0" text="Button" GridPane.columnIndex="2" GridPane.rowIndex="4" />
-                        <Button onAction="#clickButtonCelsiusToFahrenheit" layoutX="430.0" layoutY="86.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="145.0" text="Button" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-                        <Button onAction="#clickButtonGallonToLiter" layoutX="430.0" layoutY="86.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="145.0" text="Button" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                        <Button onAction="#clickButtonPoundToKilogram" layoutX="430.0" layoutY="314.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="145.0" text="Button" GridPane.columnIndex="2" GridPane.rowIndex="5" />
-                        <Label fx:id="ton_gram_label" alignment="CENTER" contentDisplay="CENTER" layoutX="20.0" layoutY="10.0" prefHeight="160.0" prefWidth="229.0" style="-fx-background-color: #c0c0c0;" textAlignment="CENTER" GridPane.columnIndex="3">
+                        <TextArea fx:id="meter_millimeter_text" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextArea fx:id="kilometer_mile_text" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <TextArea fx:id="celsius_fahrenheit_text" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <TextArea fx:id="gallon_liter_text" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <TextArea fx:id="pound_kilogram_text" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <Button onAction="#clickButtonTonToGram" layoutX="430.0" layoutY="10.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="145.0" text="convert" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+                        <Button onAction="#clickButtonMeterToMillimeter" layoutX="430.0" layoutY="10.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="145.0" text="convert" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <Button onAction="#clickButtonKilometerToNauticalMile" layoutX="430.0" layoutY="86.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="145.0" text="convert" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                        <Button onAction="#clickButtonCelsiusToFahrenheit" layoutX="430.0" layoutY="86.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="145.0" text="convert" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                        <Button onAction="#clickButtonGallonToLiter" layoutX="430.0" layoutY="86.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="145.0" text="convert" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                        <Button onAction="#clickButtonPoundToKilogram" layoutX="430.0" layoutY="314.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="145.0" text="convert" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                        <Label fx:id="ton_gram_label" alignment="CENTER" contentDisplay="CENTER" layoutX="20.0" layoutY="10.0" prefHeight="160.0" prefWidth="229.0" style="-fx-background-color: #c0c0c0;" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="0">
                             <font>
                                 <Font size="15.0" />
                             </font>
@@ -88,12 +88,12 @@
                                 <Font size="15.0" />
                             </font>
                         </Label>
-                        <Label fx:id="gallon_liter_label" alignment="CENTER" contentDisplay="CENTER" layoutX="575.0" layoutY="162.0" prefHeight="160.0" prefWidth="229.0" style="-fx-background-color: #c0c0c0;" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                        <Label fx:id="celsius_fahrenheit_label" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="160.0" prefWidth="229.0" style="-fx-background-color: #c0c0c0;" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="3">
                             <font>
                                 <Font size="15.0" />
                             </font>
                         </Label>
-                        <Label fx:id="celsius_fahrenheit_label" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="160.0" prefWidth="229.0" style="-fx-background-color: #c0c0c0;" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                        <Label fx:id="gallon_liter_label" alignment="CENTER" contentDisplay="CENTER" layoutX="575.0" layoutY="162.0" prefHeight="160.0" prefWidth="229.0" style="-fx-background-color: #c0c0c0;" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="4">
                             <font>
                                 <Font size="15.0" />
                             </font>

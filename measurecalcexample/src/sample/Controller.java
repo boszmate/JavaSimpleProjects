@@ -16,7 +16,9 @@ public class Controller {
             celsius_fahrenheit_label, pound_kilogram_label;
 
     @FXML
-    TextArea ton_gram_text;
+    TextArea ton_gram_text, meter_millimeter_text,
+            kilometer_mile_text, gallon_liter_text,
+            celsius_fahrenheit_text, pound_kilogram_text;
 
 
     private double callCalculatorAction() {
@@ -73,7 +75,6 @@ public class Controller {
             double result = callCalculatorAction();
 
             displayResult(result);
-            promptNumber = "";
         }
     }
 
@@ -85,21 +86,31 @@ public class Controller {
 
     public void clickButtonMeterToMillimeter() {
         operation = Operation.METER_TO_MILLIMETER;
+        promptNumber = meter_millimeter_text.getText();
+        computeResult();
     }
 
     public void clickButtonKilometerToNauticalMile() {
         operation = Operation.KILOMETER_TO_NAUTICAL_MILE;
+        promptNumber = kilometer_mile_text.getText();
+        computeResult();
     }
 
     public void clickButtonCelsiusToFahrenheit() {
         operation = Operation.CELSIUS_TO_FAHRENHEIT;
+        promptNumber = celsius_fahrenheit_text.getText();
+        computeResult();
     }
 
     public void clickButtonGallonToLiter() {
         operation = Operation.GALLON_TO_LITER;
+        promptNumber = gallon_liter_text.getText();
+        computeResult();
     }
 
     public void clickButtonPoundToKilogram() {
         operation = Operation.POUND_TO_KILOGRAM;
+        promptNumber = pound_kilogram_text.getText();
+        computeResult();
     }
 }

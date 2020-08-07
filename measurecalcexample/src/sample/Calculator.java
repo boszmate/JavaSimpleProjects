@@ -23,11 +23,11 @@ public class Calculator {
     }
 
     public double kilometerToNauticalMile() {
-        return numberToCalculate * 0.6214;
+        return numberToCalculate * 0.539956803;
     }
 
     public double celsiusToFahrenheit() {
-        return numberToCalculate * 33.8;
+        return numberToCalculate * 9/5 + 32;
     }
 
     public double gallonToLiter() {
